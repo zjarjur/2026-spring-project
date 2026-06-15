@@ -135,3 +135,9 @@ main {
   ;
 }
 
+summary {
+  color: black;
+  background-color: silver;
+  display: inline-block;
+  padding: 30 px;
+  margin: 30 px;
