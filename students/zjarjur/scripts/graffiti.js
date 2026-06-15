@@ -1,11 +1,12 @@
+import { CanvasEraser } from "../../../scripts/canvas-eraser.js";
 
-
-
+console.log("Accessed the test line");
 /*
 * HTML Elements
 */
 const graffitiCanvas = document.getElementById("my-graffiti");
 const surface = graffitiCanvas.getContext("2d");
+const eraser = new CanvasEraser(surface);
 
 const colorInput = document.getElementById("color-input");
 const sizeInput = document.getElementById("size-input");
@@ -80,7 +81,9 @@ function graffiti(event) {
             const halfWidth = 0.5 * width;
             const leftX = x - halfWidth;
             const upY = y - halfWidth;
-            surface.clearRect(leftX,upY,width,width);
+            const radius = width/2;
+            /*surface.clearRect(leftX,upY,width,width);*/
+            eraser.circle(x, y, radius);
 
         } else {
             surface.beginPath();
