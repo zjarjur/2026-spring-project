@@ -141,3 +141,24 @@ summary {
   display: inline-block;
   padding: 30 px;
   margin: 30 px;
+}
+
+#screen {
+  border: 2px solid rgb(255, 0, 50);
+}
+
+figure {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.light-mode figure {
+  border-color: black;
+}
+
+figcaption {
+  font-weight: bold;
+}

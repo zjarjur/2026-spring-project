@@ -64,7 +64,9 @@
         <h1>
             3D Dogs
         </h1>
-       
+       <div id="screen">
+
+       </div>
 
 
     </main>
@@ -73,8 +75,17 @@
             <p>May 18 2026</p>
         </div>
     </footer>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.183.0/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.183.0/examples/jsm/",
+          "gltfloader": "https://cdn.jsdelivr.net/npm/three@0.183.0/build/three.module.js/"
+        }
+			}
+		</script>
     <script src="./scripts/color-mode.js"></script>
-   
+   <script src="./scripts/dog3D.js" type="module"></script>
 </body>
 
 </html>

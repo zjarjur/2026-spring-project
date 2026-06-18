@@ -1,17 +1,13 @@
+
+
 .dog-picture{
     float: right;
     margin-top: 20px;
     margin-left: 20px;
-}
-
-.art-frame{
-    position: relative;
-   width: 420px;
-height: 420px;
-border: 10px solid brown;
-
+    width: 400px;
 
 }
+
 
 .art{
     width:100%;
@@ -19,11 +15,4 @@ border: 10px solid brown;
     object-fit: cover;
 }
 
-#my-graffiti{
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: crosshair;
-}
 
