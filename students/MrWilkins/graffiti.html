@@ -4,7 +4,7 @@
     <title>Graffiti</title>
     <link rel="stylesheet" href="styles/page.css" />
     <link rel="stylesheet" href="styles/counter.css" />
-    <link rel="stylesheet" href="styles/dog.css" />
+    <link rel="stylesheet" href="styles/graffiti.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,7 +44,7 @@
     <main class="center">
       <h1>Graffiti</h1>
 
-      <div class="dog-picture">
+      <div class="dog-picture" id="dog-picture">
         <div class="art-frame">
           <img class="art" src="./images/not-my-dog.jpg" width="400" />
           <canvas id="my-graffiti" width="400" height="400"> </canvas>
@@ -67,7 +67,10 @@
         </label>
         <details>
           <summary>More tools</summary>
-          <p>GitHub is SLOW.</p>
+          <figure class="mustache-box">
+            <img src="../../images/mustache.png" id="mustache" />
+            <figcaption>A funny little mustache</figcaption>
+          </figure>
         </details>
       </div>
     </main>
@@ -77,6 +80,6 @@
       </div>
     </footer>
     <script src="scripts/color-mode.js"></script>
-    <script src="scripts/graffiti.js"></script>
+    <script src="scripts/graffiti.js" type="module"></script>
   </body>
 </html>

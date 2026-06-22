@@ -168,3 +168,18 @@ footer {
   border-color: black;
   background-color: white;
 }
+
+figure {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  padding: 5px;
+}
+.light-mode figure {
+  border-color: black;
+}
+
+figcaption {
+  font-weight: bold;
+}
