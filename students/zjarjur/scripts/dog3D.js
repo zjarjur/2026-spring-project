@@ -1,11 +1,18 @@
-//Import the THREE.js library
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js";
-// To allow for the camera to move around the scene
-import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.184.0/examples/jsm/controls/OrbitControls.js";
-// To allow for importing the .gltf file
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
+
+//Import the THREE.js library
+import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
+// To allow for the camera to move around the scene
+import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
+// To allow for importing the .gltf file
+import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
 //Instantiate a loader for the .gltf file
+
+
+
+
+
+
 const loader = new GLTFLoader();
 
 console.log(loader);
@@ -38,19 +45,31 @@ controls.enableDamping = true;
 controls.dampingFactor = .03;
 
 //Keep the 3D object on a global variable so we can access it later
-let object;
+let object = "models/max.glb";
 
+let scale = 1;
 
 
 //Load the file
 function callThisFuncWhenModelIsLoaded(loadedModel) {
-  scene.add(loaded_model.scene)
-  console.log('my model is loaded')
+  scene.add(callThisFuncWhenModelIsLoaded.scene);
+  console.log('my model is loaded');
 }
 
-loader.load('./models/dog1.glb', callThisFuncWhenModelIsLoaded)
+loader.load(object, (gltf) => {
+        console.log("Imported model", gltf);
+        gltf.scene.scale.set(scale, scale, scale);
+        scene.add(gltf.scene);
+      },
+      () => {
+        console.log("progress");
+      },
+      () => {
+        console.log("error");
+      },);
 
-
+console.log(scene);
+console.log(object);
 
 /*
 

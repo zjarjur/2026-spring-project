@@ -27,3 +27,7 @@ border: 10px solid brown;
     cursor: crosshair;
 }
 
+#mustache {
+    width: 120px;
+    height: auto;
+}

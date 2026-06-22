@@ -65,7 +65,7 @@
         <h1>
             Graffiti
         </h1>
-        <div class="dog-picture">
+        <div class="dog-picture" id ="dog-picture">
             <div class="art-frame">
                 <img class="art" src="./images/P_20260413_111301.jpg" width="400">
                 <canvas id="my-graffiti" width="400" height="400"> </canvas>
@@ -74,7 +74,7 @@
                 Tool:
                 <select id="tool-select">
                     <option value="eraser">Eraser </option>
-                    <option value="pen" selected >Pen</option>
+                    <option value="pen" selected>Pen</option>
                 </select>
             </label>
             <label>
@@ -84,9 +84,16 @@
             </label>
             <label>
                 Size:
-                <input type="range" min = "1" max = "50" value="20" id="size-input">
+                <input type="range" min="1" max="50" value="20" id="size-input">
 
             </label>
+            <details>
+                <summary>More Tools</summary>
+                <figure class="mustache-box">
+                    <img src="../../images/mustache.png" id="mustache" />
+                    <figcaption>A Funny Little Mustache</figcaption>
+                </figure>
+            </details>
         </div>
 
 

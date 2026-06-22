@@ -1,9 +1,13 @@
 import { CanvasEraser } from "../../../scripts/canvas-eraser.js";
+import { StickyClickyImage } from "../../../scripts/sticky-clicky-image.js";
 
 console.log("Accessed the test line");
 /*
 * HTML Elements
 */
+const stickyMustache = new StickyClickyImage('mustache');
+stickyMustache.setContainerID("dog-picture");
+
 const graffitiCanvas = document.getElementById("my-graffiti");
 const surface = graffitiCanvas.getContext("2d");
 const eraser = new CanvasEraser(surface);
